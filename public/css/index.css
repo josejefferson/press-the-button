@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kalam&family=Zen+Loop&family=Anonymous+Pro:wght@700&display=swap');
+
+* {
+	box-sizing: border-box;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+body {
+	margin: 0;
+}
+
+.container {
+	align-items: center;
+	background-color: #ffba08;
+	color: #03071e;
+	display: flex;
+	flex-direction: column;
+	font-family: Roboto, Arial, sans-serif;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 30px;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Kalam', sans-serif;
+	font-size: 4rem;
+	margin-top: 0;
+	z-index: 1;
+}
+
+/* The Button */
+button#click {
+	border: none;
+	border-bottom: #ffffff80 3px solid;
+	border-radius: 50%;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 2rem;
+	height: 200px;
+	outline: none;
+	text-transform: uppercase;
+	transition: .2s ease;
+	width: 200px;
+}
+
+button#click {
+	background-color: #d00000;
+	box-shadow:
+		#9d0208 0 8px,
+		black 0 8px 10px,
+		white 0 0 200px 100px;
+}
+
+button#click:not(:hover) {
+	animation: button 5s ease infinite;
+}
+
+button#click:active {
+	border-bottom: transparent 3px solid;
+	box-shadow:
+		#9d0208 0 0,
+		black 0 0 3px,
+		white 0 0 200px 100px;
+	transform: translateY(8px);
+}
+
+
+/* Click counter */
+#num-clicks {
+	font-family: 'Zen Loop', sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 50px;
+	z-index: 1;
+}
+
+#num-clicks #counter {
+	display: block;
+	font-family: 'Anonymous Pro', sans-serif;
+	font-size: 3rem;
+	margin-top: 10px;
+}
+
+
+/* My clicks counter */
+#my-clicks {
+	font-family: 'Zen Loop', sans-serif;
+	font-weight: bold;
+	z-index: 1;
+}
+
+#my-clicks #my-clicks-counter {
+	font-family: 'Anonymous Pro', sans-serif;
+	z-index: 1;
+}
+
+
+/* Prizes */
+#prizes {
+	font-family: 'Zen Loop', sans-serif;
+	font-weight: bold;
+	margin-top: 20px;
+	z-index: 1;
+}
+
+#prizes #my-prizes {
+	margin-top: 10px;
+}
+
+#prizes .prize {
+	font-family: 'Apple Color Emoji', 'Segoe UI Emoji';
+	margin-right: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+#prizes .prize .quantity {
+	background-color: black;
+	border-radius: 1000px;
+	border: white 1px solid;
+	color: white;
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 10px;
+	left: 100%;
+	padding: 2px 5px;
+	position: absolute;
+	top: 0;
+	transform: translate(-50%, -50%);
+}
+
+
+/* Prize notification */
+.prize-notification {
+	align-items: center;
+	animation: hide 2s ease 5s;
+	border-radius: 1000px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 2px 5px;
+	display: flex;
+	opacity: 0;
+	padding: 5px 15px 5px 10px;
+	pointer-events: none;
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	transition: 1s ease;
+	z-index: 2;
+}
+
+.prize-notification.show {
+	opacity: 1;
+	transition: .2s ease;
+}
+
+.prize-notification .icon {
+	font-family: 'Apple Color Emoji', 'Segoe UI Emoji';
+	font-size: 1.8rem;
+	text-shadow: white 0 0 20px;
+	width: 40px;
+}
+
+.prize-notification .details {
+	flex: 1;
+	margin-left: 15px;
+	text-align: left;
+}
+
+.prize-notification .details .rarity {
+	font-size: 0.8rem;
+}
+
+
+/* Prizes rarities */
+.rarity-0-00001 {
+	background-color: black !important;
+	color: white !important;
+}
+
+.rarity-0-0001 {
+	background-color: #F2AF19 !important;
+	color: black !important;
+}
+
+.rarity-0-001 {
+	background-color: #9D4EBB !important;
+	color: white !important;
+}
+
+.rarity-0-0025 {
+	background-color: #4D51F8 !important;
+	color: white !important;
+}
+
+.rarity-0-01 {
+	background-color: #329337 !important;
+	color: white !important;
+}
+
+.rarity-0-025 {
+	background-color: #FFFFFF !important;
+	color: black !important;
+}
+
+
+/* Phrase */
+.phrase {
+	background-color: rgba(0, 0, 0, 0.9);
+	bottom: 10px;
+	color: white;
+	font-family: 'Anonymous Pro';
+	max-width: calc(100% - 20px);
+	opacity: 0;
+	padding: 10px;
+	pointer-events: none;
+	position: fixed;
+	transition: opacity 1s ease;
+	z-index: 1;
+}
+
+.phrase.show {
+	opacity: 1;
+	transition: opacity .2s ease;
+}
+
+.phrase .cursor {
+	animation: blink 1s steps(1) infinite;
+}
+
+
+.hidden {
+	display: none !important;
+}
+
+@keyframes button {
+
+	from,
+	80%,
+	90%,
+	to {
+		border-bottom: #ffffff80 3px solid;
+		box-shadow: #9d0208 0 8px,
+			black 0 8px 10px,
+			white 0 0 200px 100px;
+		transform: translateY(0px);
+	}
+
+	85%,
+	95% {
+		border-bottom: transparent 3px solid;
+		box-shadow: #9d0208 0 0,
+			black 0 0 3px,
+			white 0 0 200px 100px;
+		transform: translateY(8px);
+	}
+}
+
+@keyframes blink {
+
+	from,
+	to {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>Press the button!</title>
+	<link rel="stylesheet" href="lib/css/odometer-theme-default.min.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Press the button!</h1>
+
+		<button id="click">Click me!</button>
+
+		<div id="num-clicks">
+			<span>Number of button clicks:</span>
+			<div id="counter"></div>
+		</div>
+
+		<div id="my-clicks">
+			<span>My clicks:</span>
+			<div id="my-clicks-counter"></div>
+		</div>
+
+		<div id="prizes" class="hidden">
+			<span>My prizes:</span>
+			<div id="my-prizes"></div>
+		</div>
+
+		<div class="prize-notification">
+			<span class="icon"></span>
+			<div class="details">
+				<div class="text">You received a prize!</div>
+				<div class="rarity"></div>
+			</div>
+		</div>
+
+		<div class="phrase">
+			<span class="text"></span>
+			<span class="cursor">▌</span>
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.min.js"></script>
+	<script src="lib/js/odometer.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

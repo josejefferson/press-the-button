@@ -1,0 +1,17 @@
+{
+  "name": "press-the-button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Jefferson Dantas",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.4.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "socket.io": "^4.1.3"
+  }
+}
